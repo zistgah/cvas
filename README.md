@@ -1,5 +1,7 @@
 # CVAS Cloud Source Harness - Iteration 2
 
+DOI: [10.5281/zenodo.23837986](https://doi.org/10.5281/zenodo.23837986)
+
 Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
 
 **Independent seed and mint.** CVAS is a reusable contribution, verification and assurance harness for projects that expose bounded components through explicit contracts. This is **CVAS Iteration 2**, not part of the PAP iteration sequence. It is a separate lineage from the Seed and Mint Iteration 51 workstream.

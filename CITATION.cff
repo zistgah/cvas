@@ -2,6 +2,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using these metadata."
 title: "CVAS: Contribution, Verification and Assurance System (Cloud Source Harness)"
+doi: 10.5281/zenodo.23837986
 version: 0.1.0-alpha
 license: GPL-3.0-only
 type: software
