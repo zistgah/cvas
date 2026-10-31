@@ -1,0 +1,18 @@
+{
+    "_type": "https://in-toto.io/Statement/v1",
+    "predicateType": "https://project-ilm.org/attestations/candor/v1",
+    "subject": [
+        {
+            "name": "zistgah/cvas",
+            "digest": {
+                "gitCommit": "883e1b03db26d2e5a52beb881a4a9c59ebddafc4"
+            }
+        }
+    ],
+    "predicate": {
+        "action": "PUSH",
+        "reason": "seed",
+        "utc": "20261031T135021Z",
+        "host": "ilm01-lin"
+    }
+}
