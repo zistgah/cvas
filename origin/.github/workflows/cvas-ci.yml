@@ -1,0 +1,44 @@
+# Copyright © 1993-2026 Abhishek Choudhary. All rights reserved.
+# AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
+name: CVAS contribution verification
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout proposed revision
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate workflow YAML and run verifier tests
+        run: |
+          python -m unittest discover -s tests -v
+      - name: Verify reference component with JavaScript-first verifier
+        run: node pipeline/verify.mjs examples/sample-component --json-out cvas-report.json
+      - name: Verify retained Python component through JavaScript harness
+        run: node pipeline/verify.mjs examples/python-sample --json-out cvas-python-via-js-report.json
+      - name: Verify retained Python compatibility verifier
+        run: python pipeline/verify.py examples/python-sample --json-out cvas-python-native-report.json
+      - name: Upload verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cvas-verification-report
+          path: cvas-report.json
+          if-no-files-found: ignore

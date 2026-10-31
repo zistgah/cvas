@@ -1,0 +1,19 @@
+# © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "CVAS: Contribution, Verification and Assurance System (Cloud Source Harness)"
+version: 0.1.0-alpha
+license: GPL-3.0-only
+type: software
+authors:
+  - family-names: Choudhary
+    given-names: Abhishek
+    affiliation: AyeAI
+    orcid: "https://orcid.org/0009-0002-0684-8320"
+keywords:
+  - contribution harness
+  - verification
+  - assurance
+  - mutation testing
+  - Google Colab
+  - GitHub Actions

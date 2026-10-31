@@ -1,0 +1,5 @@
+# Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
+# Replace these placeholders with project maintainers before enabling protected-branch policy.
+* @PROJECT-OWNER
+/.github/ @SECURITY-OWNER
+/pipeline/ @ARCHITECTURE-OWNER

@@ -1,0 +1,51 @@
+{
+  "id": "replace-with-component-id",
+  "version": "0.1.0",
+  "purpose": "Describe the bounded capability.",
+  "runtime": "node",
+  "entrypoint": "component.js",
+  "test": "test.mjs",
+  "inputs": [
+    {
+      "name": "value",
+      "type": "finite-number",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "finite-number"
+    }
+  ],
+  "interfaces": [
+    "CVAS.Component/1"
+  ],
+  "preconditions": [
+    "input is an object",
+    "value is a finite number"
+  ],
+  "postconditions": [
+    "output value equals input value multiplied by two"
+  ],
+  "invariants": [
+    "input is not mutated",
+    "invalid input never returns OK"
+  ],
+  "stateOwnership": "No persistent state; input is read-only.",
+  "dependencies": [],
+  "failureBehaviour": "HOLD",
+  "replaceability": "contract-bound",
+  "verification": [
+    "normal",
+    "boundary",
+    "negative",
+    "failure",
+    "invariant",
+    "independent-reference"
+  ],
+  "riskClass": "A",
+  "license": "GPL-3.0-only",
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.",
+  "mutationTest": "mutation-test.mjs"
+}

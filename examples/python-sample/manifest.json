@@ -1,0 +1,47 @@
+{
+  "id": "sample-python-doubler",
+  "version": "1.0.0",
+  "purpose": "Demonstrates retained Python component support.",
+  "runtime": "python",
+  "entrypoint": "component.py",
+  "test": "test.py",
+  "mutationTest": "mutation_test.py",
+  "inputs": [
+    {
+      "name": "value",
+      "type": "finite-number",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "finite-number"
+    }
+  ],
+  "interfaces": [
+    "CVAS.Component/1"
+  ],
+  "preconditions": [
+    "value is numeric"
+  ],
+  "postconditions": [
+    "value is doubled"
+  ],
+  "invariants": [
+    "invalid input returns HOLD"
+  ],
+  "stateOwnership": "No persistent state.",
+  "dependencies": [],
+  "failureBehaviour": "HOLD",
+  "replaceability": "contract-bound",
+  "verification": [
+    "positive",
+    "negative",
+    "invalid-input",
+    "mutation"
+  ],
+  "riskClass": "A",
+  "license": "GPL-3.0-only",
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary."
+}

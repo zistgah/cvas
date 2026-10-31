@@ -1,0 +1,24 @@
+# Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
+name: Contribution policy checks
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+permissions:
+  contents: read
+jobs:
+  policy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check workflow privilege boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -R -n --exclude=pull-request-policy.yml -E "^[[:space:]]*(on:.*)?pull_request_target" .github/workflows; then
+            echo "Privileged pull_request_target workflow requires security review."
+            exit 1
+          fi
+          echo "PASS: no pull_request_target workflow detected"

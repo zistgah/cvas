@@ -1,0 +1,28 @@
+{
+ "title": "CVAS: Contribution, Verification and Assurance System (Cloud Source Harness)",
+ "version": "0.1.0-alpha",
+ "upload_type": "software",
+ "description": "<p>CVAS is a project-independent contribution, verification and assurance harness. A contributor, human or AI, supplies a bounded component with a manifest, an implementation, a test suite and a mutation test; the harness validates the archive and the manifest, runs the tests within time limits, records evidence with hashes, and routes the change by risk class (A, B or C) to the review it needs. It is web-first: a static site, a JavaScript verifier, and a browser-only Google Colab workflow, with Python retained for Python components.</p><p>This alpha release is CVAS iteration 8. Files changed when the repository was seeded are listed in origin/SEED-DIFF.md, with each original kept under origin/.</p><p>© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.</p>",
+ "license": "gpl-3.0-only",
+ "access_right": "open",
+ "language": "eng",
+ "creators": [
+  {
+   "name": "Choudhary, Abhishek",
+   "affiliation": "AyeAI",
+   "orcid": "0009-0002-0684-8320"
+  }
+ ],
+ "keywords": [
+  "contribution harness",
+  "verification",
+  "assurance",
+  "mutation testing",
+  "risk classes",
+  "Google Colab",
+  "GitHub Actions"
+ ],
+ "programming_language": "JavaScript",
+ "repository": "https://github.com/zistgah/cvas",
+ "related_identifiers": []
+}
